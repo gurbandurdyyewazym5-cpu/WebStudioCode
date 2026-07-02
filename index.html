@@ -64,6 +64,7 @@ body{
 .aurora span:nth-child(1){width:46vw;height:46vw;left:-6vw;top:-4vw;background:radial-gradient(circle, rgba(56,225,255,.55), transparent 62%);}
 .aurora span:nth-child(2){width:42vw;height:42vw;right:-8vw;top:6vw;background:radial-gradient(circle, rgba(79,124,255,.5), transparent 60%);animation-duration:32s;animation-delay:-6s}
 .aurora span:nth-child(3){width:38vw;height:38vw;left:24vw;top:42vw;background:radial-gradient(circle, rgba(124,92,255,.42), transparent 60%);animation-duration:38s;animation-delay:-12s}
+.aurora span:nth-child(4){width:34vw;height:34vw;left:2vw;bottom:-12vw;background:radial-gradient(circle, rgba(79,124,255,.32), transparent 62%);animation-duration:44s;animation-delay:-18s}
 @keyframes drift{
   0%{transform:translate3d(0,0,0) scale(1)}
   50%{transform:translate3d(6vw,-4vw,0) scale(1.15)}
@@ -75,6 +76,9 @@ body{
   background-size:64px 64px;
   -webkit-mask-image:radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 78%);
   mask-image:radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 78%);}
+.code-motif{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.05;mix-blend-mode:screen;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='340' height='340'%3E%3Cg font-family='monospace' font-weight='700'%3E%3Ctext x='20' y='48' font-size='28' fill='%2338e1ff'%3E%7B%7D%3C/text%3E%3Ctext x='180' y='36' font-size='20' fill='%234f7cff'%3E//%3C/text%3E%3Ctext x='255' y='118' font-size='22' fill='%237c5cff'%3E01%3C/text%3E%3Ctext x='36' y='150' font-size='26' fill='%2338e1ff'%3E%3B%3C/text%3E%3Ctext x='150' y='205' font-size='20' fill='%234f7cff'%3E%23%3C/text%3E%3Ctext x='235' y='270' font-size='24' fill='%237c5cff'%3E%7B%7D%3C/text%3E%3Ctext x='55' y='300' font-size='18' fill='%2338e1ff'%3E01%3C/text%3E%3C/g%3E%3C/svg%3E");
+  background-size:340px 340px;}
 .grain{position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.05;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
 
@@ -306,8 +310,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{
 <body>
 
 <!-- ATMOSPHERE -->
-<div class="bg"><div class="aurora"><span></span><span></span><span></span></div></div>
+<div class="bg"><div class="aurora"><span></span><span></span><span></span><span></span></div></div>
 <div class="grid"></div>
+<div class="code-motif"></div>
 <div class="grain"></div>
 
 <!-- NAV -->
